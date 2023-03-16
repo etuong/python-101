@@ -8,15 +8,18 @@ def calculate_interest_rate(P, A, t, n):
           f'and {t} is the term of the loan in years.')
 
 
-# Press the green button in the gutter to run the script.
+# In PyCharm, press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print('Welcome to Ethan\'s Interest Rate Calculator!')
     P = input('Total principal amount: ')
     A = input('Total amount paid: ')
     t = input('Term of the loan in years: ')
     n = input('Number of interest payments per year: ')
+
+    # Convert str to proper types
     actual_principal = float(P)
     actual_total_amont = float(A)
     actual_time = int(t)
     actual_number_of_payments = int(n)
+    
     calculate_interest_rate(actual_principal, actual_total_amont, actual_time, actual_number_of_payments)
