@@ -1,12 +1,4 @@
-# Ethan Thomas Uong, euong1
-
 ## _Module 6 - Functions_
-
-### OCT 10, 2021
-
-#### Python Version: 3.8.0
-
-#### PyCharm IDE, Community Edition Version 2021.2.1
 
 ---
 
@@ -32,4 +24,4 @@ tackled this problem by storing the rows using a list inside a list and printing
 
 - In catalan.py, since we are dividing (n+k)/k the result will be a float, but since the output expects an integer, I
   convert the float to an int at the very end when I display the catalan numbers. As a result, there is some rounding
-  differences. The only known difference is when the order is 14. Solution output has it as 9694845 whereas mine reads 9694844. 
+  differences. The only known difference is when the order is 14. Solution output has it as 9694845 whereas mine reads 9694844.

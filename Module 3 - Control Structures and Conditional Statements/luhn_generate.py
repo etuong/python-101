@@ -1,3 +1,6 @@
+# Simple checksum formula used to validate a variety of identification
+# numbers such as credit card numbers
+
 def get_sum(n):
     digitSum = 0
     while n != 0:
@@ -40,4 +43,5 @@ if __name__ == '__main__':
         running_total += odd_digit
 
     check_digit = 10 - running_total % 10
-    print(f"The valid credit card number is: {number}{check_digit} and the newly computed check digit is: {check_digit}")
+    print(
+        f"The valid credit card number is: {number}{check_digit} and the newly computed check digit is: {check_digit}")

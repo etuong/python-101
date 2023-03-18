@@ -1,12 +1,4 @@
-# Ethan Thomas Uong, euong1
-
 ## _Module 5 - Files, IO, Data Encoding_
-
-### OCT 03, 2021
-
-#### Python Version: 3.8.0
-
-#### PyCharm IDE, Community Edition Version 2021.2.1
 
 ---
 
@@ -18,29 +10,19 @@ python kmeans.py
 
 ## Approach
 
-My approach for this assignment was to use a list of a list to manage the points. I knew the cluster had to be organized
-in such a way that I retrieve and update the cluster mapping. So, I decided to use a map because the keys are always
-going to be unique and the value can be the list of those said points.
+My approach for this assignment was to use a list of a list to manage the points. I knew the cluster had to be organized in such a way that I retrieve and update the cluster mapping. So, I decided to use a map because the keys are always going to be unique and the value can be the list of those said points.
 
-The hardest decision was really down to set versus list. I was not too certain of how unique the points where going to
-be so I played it safe by choosing a list instead. To make the program generic, I knew I had to read in the first three
-lines. After that I didn't want to hardcode anything so I programmatically set the starting index to be 3 plus the k. In
-other words, point1.txt has k=4 so I knew I should start appending the points to the list at the 7th line.
+The hardest decision was really down to set versus list. I was not too certain of how unique the points where going to be so I played it safe by choosing a list instead. To make the program generic, I knew I had to read in the first three lines. After that I didn't want to hardcode anything so I programmatically set the starting index to be 3 plus the k. In other words, point1.txt has k=4 so I knew I should start appending the points to the list at the 7th line.
 
-To compare the size of the clusters in order to increment the convergence counter, I record the previous size in a list
-and then check if the integers are the same.
-
-## Known Bugs
-
-- N/A I spent a great deal on this assignment and made sure I covered all edges. :)
+To compare the size of the clusters in order to increment the convergence counter, I record the previous size in a list and then check if the integers are the same.
 
 ## Additional Information
 
 - In the name of fun, I included Matplotlib. Please uncomment the appropriate lines to see this in action!
-    - Line 4 to import matplotlib
-    - Function plotClusters that plots the clusters and points
-    - Lines 110 and 111 that plots the very first map
-    - Line 119 that plots the very last map
+  - Line 4 to import matplotlib
+  - Function plotClusters that plots the clusters and points
+  - Lines 110 and 111 that plots the very first map
+  - Line 119 that plots the very last map
 
 ## Questions
 

@@ -16,4 +16,5 @@ if __name__ == '__main__':
     actual_rate = float(r)
     actual_time = int(t)
     actual_number_of_payments = int(n)
-    calculate_interest(actual_principal, actual_rate, actual_time, actual_number_of_payments)
+    calculate_interest(actual_principal, actual_rate,
+                       actual_time, actual_number_of_payments)

@@ -1,5 +1,6 @@
 def print_due_date(month, day, year, hour, minute):
-    print(f'Module 1 Assignment is due on {month}/{day}/{year} at {hour}:{minute} EST.')
+    print(
+        f'Module 1 Assignment is due on {month}/{day}/{year} at {hour}:{minute} EST.')
 
 
 if __name__ == '__main__':

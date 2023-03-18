@@ -1,10 +1,10 @@
 def calculate_interest_rate(P, A, t, n):
     temp1 = (A / P)**(1 / (n * t))
     r = n * (temp1 - 1)
-    print(f'The interest rate on a loan for {P} ' \
-          f'that cost {A} over {t} years is: {r}, ' \
-          f'where {P} is the principal amount, ' \
-          f'{A} is the total amount paid including both interest and principal (the result of interest.py), ' \
+    print(f'The interest rate on a loan for {P} '
+          f'that cost {A} over {t} years is: {r}, '
+          f'where {P} is the principal amount, '
+          f'{A} is the total amount paid including both interest and principal (the result of interest.py), '
           f'and {t} is the term of the loan in years.')
 
 
@@ -21,5 +21,6 @@ if __name__ == '__main__':
     actual_total_amont = float(A)
     actual_time = int(t)
     actual_number_of_payments = int(n)
-    
-    calculate_interest_rate(actual_principal, actual_total_amont, actual_time, actual_number_of_payments)
+
+    calculate_interest_rate(
+        actual_principal, actual_total_amont, actual_time, actual_number_of_payments)

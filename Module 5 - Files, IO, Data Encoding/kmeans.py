@@ -1,7 +1,7 @@
 import copy
 import math
 
-#import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def parse_patient_info(lines, index):
@@ -16,6 +16,7 @@ def has_size_change(list1, list2):
         if list1[i] is not list2[i]:
             return True
     return False
+
 
 """
 def plotClusters(first_time):
@@ -61,7 +62,8 @@ colors = ["#000000", "#0000FF", "#88c999", "#FFA500"]
 # Append data to initial patient list and create map to keep track of clusters
 cluster_map = dict()
 for i in range(len(initial_patients_indices)):
-    initial_patients_list.append(parse_patient_info(lines, initial_patients_indices[i] + starting_index))
+    initial_patients_list.append(parse_patient_info(
+        lines, initial_patients_indices[i] + starting_index))
     cluster_map[i] = list()
 original_initial_patients_indices = copy.deepcopy(initial_patients_list)
 
@@ -107,7 +109,7 @@ for i in range(max_num_of_iter):
     # Save current cluster sizes (for comparison in next iteration)
     current_cluster_size = [len(value) for key, value in cluster_map.items()]
 
-    #if i == 1:
+    # if i == 1:
     #    plotClusters(True)
 
     # Empty clusters for re-clustering except on final iteration
@@ -115,8 +117,8 @@ for i in range(max_num_of_iter):
         for j in range(len(initial_patients_indices)):
             cluster_map[j] = list()
 
-#Final cluster map
-#plotClusters(False)
+# Final cluster map
+# plotClusters(False)
 
 # Output results in specified format
 print(f"Initial COVID-19 Patients: {original_initial_patients_indices}\n")
