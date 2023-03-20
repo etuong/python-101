@@ -36,7 +36,8 @@ class ImageEncrypter:
                 encrypted_pixel = []
                 for i in range(len(current_pixel)):
                     self.lfsr.step()
-                    encrypted_pixel.append(current_pixel[i] ^ int(self.lfsr.get_seed(), 2))
+                    encrypted_pixel.append(
+                        current_pixel[i] ^ int(self.lfsr.get_seed(), 2))
 
                     # Rewrite to the encrypted pixel
                 pixels[x, y] = tuple(encrypted_pixel)

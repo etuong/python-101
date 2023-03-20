@@ -1,12 +1,4 @@
-# Ethan Thomas Uong, euong1
-
 ## _Module 11 - Data Science_
-
-### NOV 14, 2021
-
-#### Python Version: 3.8.0
-
-#### PyCharm IDE, Community Edition Version 2021.2.1
 
 ---
 
@@ -31,7 +23,3 @@ similar.
 The hardest part of the assignment was learning how to access and modify the elements of the numpy array. So to keep it
 simple, I just update the elements in-place. Lastly, I learned that numpy integer data are actually numpy.int32 or
 numpy.int64 which are not the same as the Python primitives.
-
-## Known Bugs
-
-- N/A I spent a great deal on this assignment and made sure I covered all edges and bugs. :)

@@ -1,12 +1,4 @@
-# Ethan Thomas Uong, euong1
-
 ## _Module 8-9 - Object Oriented Programming_
-
-### OCT 31, 2021
-
-#### Python Version: 3.8.0
-
-#### PyCharm IDE, Community Edition Version 2021.2.1
 
 ---
 
@@ -25,12 +17,3 @@ python image_encrypter.py
   Working with int and binary was challenging and knowing how to use XOR on such types was not easy. Finally, I had to
   revisit previous lessons including the fact that tuples cannot be changed. Instead I collected the encrypted pixels
   into a list and reset the pixel tuple before saving the image.
-
-## Known Bugs
-
-- Not really a bug but my design is a tad off from the assignment algorithm and pseudocode. The results are consistent
-  and correct, though.
-
-## Partner Collaboration:
-
-N/A - I worked alone on this assignment

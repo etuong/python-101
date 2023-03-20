@@ -1,12 +1,4 @@
-# Ethan Thomas Uong, euong1
-
-## _Module 7 - Midterm_
-
-### OCT 17, 2021
-
-#### Python Version: 3.8.0
-
-#### PyCharm IDE, Community Edition Version 2021.2.1
+## _Module 7 - Encryption and Decryption 
 
 ---
 
@@ -28,10 +20,6 @@ The tricky part here is that there could be more than one character associated t
 this I wanted to break out of the dictionary loop as soon as the first character is found. The rest is manually decipher
 by hand. This approach is practically reasonable because in real life, and given a random arbitrary string, it's most
 likely uncommon for characters to have the same frequency count.
-
-## Known Bugs
-
-- N/A
 
 ## Hand Calculation
 
