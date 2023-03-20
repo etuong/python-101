@@ -13,7 +13,8 @@ def DiningPhilosophers():
     forks = [Fork() for i in range(n)]
 
     # Use a list comprehension to create 5 Philosopher’s and correctly assign each pair of forks to each philosopher
-    philosophers = [Philosopher(philosopher_names[i], forks[i], forks[(i + 1) % n]) for i in range(n)]
+    philosophers = [Philosopher(
+        philosopher_names[i], forks[i], forks[(i + 1) % n]) for i in range(n)]
 
     # Start all 5 Philosopher threads (should be non-blocking)
     for philosopher in philosophers:

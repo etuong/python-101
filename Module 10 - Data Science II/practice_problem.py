@@ -44,7 +44,8 @@ print(connectivity)
 print()
 
 print("Question 4")
-print(f'Shortest path between "j" and "b": {nx.dijkstra_path(graph, "j", "b")}')
+print(
+    f'Shortest path between "j" and "b": {nx.dijkstra_path(graph, "j", "b")}')
 print()
 
 # Draw the graph

@@ -60,7 +60,6 @@ else:
             node_id = layer_id + str(i)
             layer_2_ids.append(node_id)
 
-
         def ford_fulkerson(graph, source, sink, i):
             flow, path = 0, True
 
@@ -81,7 +80,6 @@ else:
             # print(the_Sum)
             if flow != the_Sum:
                 eliminated.append(i)
-
 
         def depth_first_search(graph, source, sink):
             undirected = graph.to_undirected()
@@ -122,7 +120,6 @@ else:
 
             return path, reserve
 
-
         for n in range(0, teams):
             graph = nx.DiGraph()
             graph.add_node('S')
@@ -131,7 +128,8 @@ else:
             graph.add_node('T')
             Twins = [wins[n] + remain[n]]
             for i in range(0, len(layer_1_ids)):
-                graph.add_edges_from([('S', layer_1_ids[i], {'capacity': Layer1_capacities[i], 'flow': 0})])
+                graph.add_edges_from(
+                    [('S', layer_1_ids[i], {'capacity': Layer1_capacities[i], 'flow': 0})])
             k = 0
             for i in range(0, teams):
                 for j in range(i, teams - 1):
@@ -143,9 +141,11 @@ else:
                         k = k + 1
             for i in range(0, teams):
                 if (i == n):
-                    graph.add_edges_from([(layer_2_ids[i], 'T', {'capacity': remain[i], 'flow': 0})])
+                    graph.add_edges_from(
+                        [(layer_2_ids[i], 'T', {'capacity': remain[i], 'flow': 0})])
                 else:
-                    graph.add_edges_from([(layer_2_ids[i], 'T', {'capacity': Twins - wins[i], 'flow': 0})])
+                    graph.add_edges_from(
+                        [(layer_2_ids[i], 'T', {'capacity': Twins - wins[i], 'flow': 0})])
             ford_fulkerson(graph, 'S', 'T', n)
 
         # print(eliminated)

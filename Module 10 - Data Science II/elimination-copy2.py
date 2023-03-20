@@ -57,7 +57,6 @@ else:
         node_id = layer_id + str(team)
         layer_2_ids.append(node_id)
 
-
     def ford_fulkerson(graph, source, sink, i):
         flow, path = 0, True
 
@@ -76,7 +75,6 @@ else:
         the_Sum = sum(Layer1_capacities)
         if flow != the_Sum:
             eliminated.append(i)
-
 
     def depth_first_search(graph, source, sink):
         undirected = graph.to_undirected()
@@ -117,7 +115,6 @@ else:
 
         return path, reserve
 
-
     for n in range(0, teams):
         graph = nx.DiGraph()
         graph.add_node('S')
@@ -126,7 +123,8 @@ else:
         graph.add_node('T')
         Twins = [wins[n] + remain[n]]
         for team in range(0, len(layer_1_ids)):
-            graph.add_edges_from([('S', layer_1_ids[team], {'capacity': Layer1_capacities[team], 'flow': 0})])
+            graph.add_edges_from(
+                [('S', layer_1_ids[team], {'capacity': Layer1_capacities[team], 'flow': 0})])
         k = 0
         for team in range(0, teams):
             for j in range(team, teams - 1):
@@ -138,9 +136,11 @@ else:
                     k = k + 1
         for team in range(0, teams):
             if (team == n):
-                graph.add_edges_from([(layer_2_ids[team], 'T', {'capacity': remain[team], 'flow': 0})])
+                graph.add_edges_from(
+                    [(layer_2_ids[team], 'T', {'capacity': remain[team], 'flow': 0})])
             else:
-                graph.add_edges_from([(layer_2_ids[team], 'T', {'capacity': Twins - wins[team], 'flow': 0})])
+                graph.add_edges_from(
+                    [(layer_2_ids[team], 'T', {'capacity': Twins - wins[team], 'flow': 0})])
         ford_fulkerson(graph, 'S', 'T', n)
 
     for team in eliminated:
@@ -152,6 +152,7 @@ if __name__ == '__main__':
             R = test.certificateOfElimination(team)
             if type(R) == list:
                 R = ' '.join(test.certificateOfElimination(team))
-            print('{} is eliminated by the subset R = '.format(team) + '{' + R + '}')
+            print('{} is eliminated by the subset R = '.format(
+                team) + '{' + R + '}')
         else:
             print('{} is not eliminated'.format(team))

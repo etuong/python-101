@@ -40,9 +40,11 @@ if __name__ == '__main__':
                     if (points[i].slope_to(points[j]) == points[i].slope_to(points[k])) and (
                             points[i].slope_to(points[j]) == points[i].slope_to(points[l])):
                         # Cute trick to get the first and last point of the line for plotting purposes
-                        colinear_points = [points[i], points[j], points[k], points[l]]
+                        colinear_points = [points[i],
+                                           points[j], points[k], points[l]]
                         colinear_points.sort()
-                        print(f"{points[i]}, {points[j]}, {points[k]}, {points[l]}")
+                        print(
+                            f"{points[i]}, {points[j]}, {points[k]}, {points[l]}")
                         plot_colinear(colinear_points[0], colinear_points[-1])
 
     plot_points(points)

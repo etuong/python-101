@@ -37,7 +37,8 @@ class PlayoffElimination:
             a = i != team_index
 
             # Does the current team stand a chance against the team with the most wins?
-            b = self.wins[team_index] + self.remaining[team_index] < self.wins[i]
+            b = self.wins[team_index] + \
+                self.remaining[team_index] < self.wins[i]
 
             # If not, return that first team with the most wins
             if a & b:
@@ -52,16 +53,20 @@ class PlayoffElimination:
 
         for i in range(number_of_teams):
             if i != team_index:
-                team_capacity = self.wins[team_index] + self.remaining[team_index] - self.wins[i]
+                team_capacity = self.wins[team_index] + \
+                    self.remaining[team_index] - self.wins[i]
                 directed_graph.add_node(i)
                 directed_graph.add_edge(i, 't', capacity=team_capacity)
                 for j in range(i + 1, number_of_teams):
                     if j != team_index:
                         i_to_j = '{}-{}'.format(i, j)
                         directed_graph.add_node(i_to_j)
-                        directed_graph.add_edge('s', i_to_j, capacity=self.g[i][j])
-                        directed_graph.add_edge(i_to_j, i, capacity=float('inf'))
-                        directed_graph.add_edge(i_to_j, j, capacity=float('inf'))
+                        directed_graph.add_edge(
+                            's', i_to_j, capacity=self.g[i][j])
+                        directed_graph.add_edge(
+                            i_to_j, i, capacity=float('inf'))
+                        directed_graph.add_edge(
+                            i_to_j, j, capacity=float('inf'))
 
         # Find all the team nodes on the source-side of the min-cut so
         # we can fully deduce the cause of a team’s elimination.

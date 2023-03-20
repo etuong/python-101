@@ -20,4 +20,3 @@ class Point:
     # Print to string
     def __str__(self):
         return f'({self.x}, {self.y})'
-
